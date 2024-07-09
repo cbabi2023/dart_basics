@@ -247,4 +247,6 @@ void printName() {
   print("The Custom Function !");
 }
 
-// hello is this changed 
+// Create a Function and take two int as arguments and find there sum
+
+
