@@ -247,7 +247,6 @@
 //   print("The Custom Function !");
 // }
 
-
 // import 'dart:io';
 
 // int? firstInput;
@@ -284,35 +283,62 @@
 
 // Create a Function and take two int as arguments and print the integers
 
-import 'dart:io';
+// import 'dart:io';
 
-int? firstInput;
-int? secondInput;
+// int? firstInput;
+// int? secondInput;
+
+// void main() {
+//   myFunction(firstInteger: firstInteger, secondIneger: secondInteger);
+// }
+
+// void myFunction(
+//     {required Function() firstInteger, required Function() secondIneger}) {
+//   int firstInput = firstInteger();
+//   int secondInput = secondIneger();
+
+//   int sum = firstInput + secondInput;
+
+//   print("The sum of the $firstInput + $secondInput = $sum");
+// }
+
+// // First Input Function
+// void firstInteger() {
+//   stdout.write("Enter the First Integer : ");
+//   firstInput = int.parse(stdin.readLineSync()!);
+//   print("The First Integer : $firstInput");
+// }
+
+// // Second Input Function
+// void secondInteger() {
+//   stdout.write("Enter the Second Integer : ");
+//   secondInput = int.parse(stdin.readLineSync()!);
+//   print("The Second Integer : $secondInput");
+// }
 
 void main() {
-  myFunction(firstInteger: firstInteger, secondIneger: secondInteger);
+  myFun(customFunction);
 }
 
-void myFunction(
-    {required Function() firstInteger, required Function() secondIneger}) {
-  int firstInput = firstInteger();
-  int secondInput = secondIneger();
-
-  int sum = firstInput + secondInput;
-
-  print("The sum of the $firstInput + $secondInput = $sum");
+void myFun(void Function(int a, int b) customFunction) {
+  print("Fun..");
+  customFunction(3, 5);
 }
 
-// First Input Function
-void firstInteger() {
-  stdout.write("Enter the First Integer : ");
-  firstInput = int.parse(stdin.readLineSync()!);
-  print("The First Integer : $firstInput");
+void customFunction( int a, int b ) {
+  print("Printing the Arguments: $a and $b ");
 }
 
-// Second Input Function
-void secondInteger() {
-  stdout.write("Enter the Second Integer : ");
-  secondInput = int.parse(stdin.readLineSync()!);
-  print("The Second Integer : $secondInput");
-}
+// void main() {
+//   myFun(customFunction);
+// }
+
+// void myFun(void Function({required int a, required int b}) customFunction) {
+//   print("Fun..");
+//   customFunction(a: 3, b: 45);
+// }
+
+// void customFunction({required int a, required int b}) {
+//   print("Printing the Arguments: $a and $b");
+// }
+
