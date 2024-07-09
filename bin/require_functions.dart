@@ -247,9 +247,47 @@
 //   print("The Custom Function !");
 // }
 
-// Create a Function and take two int as arguments and find there sum
+
+// import 'dart:io';
+
+// int? firstInput;
+// int? secondInput;
+
+// void main() {
+//   firstInteger();
+//   secondInteger();
+//   myFunction();
+// }
+
+// void myFunction() {
+//   if (firstInput != null && secondInput != null) {
+//     int sum = firstInput! + secondInput!;
+//     print("The sum of $firstInput + $secondInput = $sum");
+//   } else {
+//     print("Error: Both integers must be entered.");
+//   }
+// }
+
+// // First Input Function
+// void firstInteger() {
+//   stdout.write("Enter the First Integer: ");
+//   firstInput = int.parse(stdin.readLineSync()!);
+//   print("The First Integer: $firstInput");
+// }
+
+// // Second Input Function
+// void secondInteger() {
+//   stdout.write("Enter the Second Integer: ");
+//   secondInput = int.parse(stdin.readLineSync()!);
+//   print("The Second Integer: $secondInput");
+// }
+
+// Create a Function and take two int as arguments and print the integers
 
 import 'dart:io';
+
+int? firstInput;
+int? secondInput;
 
 void main() {
   myFunction(firstInteger: firstInteger, secondIneger: secondInteger);
@@ -257,20 +295,24 @@ void main() {
 
 void myFunction(
     {required Function() firstInteger, required Function() secondIneger}) {
-  firstInteger();
-  secondIneger();
+  int firstInput = firstInteger();
+  int secondInput = secondIneger();
+
+  int sum = firstInput + secondInput;
+
+  print("The sum of the $firstInput + $secondInput = $sum");
 }
 
 // First Input Function
 void firstInteger() {
   stdout.write("Enter the First Integer : ");
-  int firstInput = int.parse(stdin.readLineSync()!);
+  firstInput = int.parse(stdin.readLineSync()!);
   print("The First Integer : $firstInput");
 }
 
 // Second Input Function
 void secondInteger() {
   stdout.write("Enter the Second Integer : ");
-  int secondInput = int.parse(stdin.readLineSync()!);
+  secondInput = int.parse(stdin.readLineSync()!);
   print("The Second Integer : $secondInput");
 }
