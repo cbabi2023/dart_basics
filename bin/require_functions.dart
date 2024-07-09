@@ -231,22 +231,46 @@
 //   print("The Custom Function !");
 // }
 
-myFun({required Function() customFun}) {
-  customFun();
-}
+// myFun({required Function() customFun}) {
+//   customFun();
+// }
 
-void main() {
-  myFun(customFun: () {
-    print("Anonymous Function ");
-  });
+// void main() {
+//   myFun(customFun: () {
+//     print("Anonymous Function ");
+//   });
 
-  myFun(customFun: printName);
-}
+//   myFun(customFun: printName);
+// }
 
-void printName() {
-  print("The Custom Function !");
-}
+// void printName() {
+//   print("The Custom Function !");
+// }
 
 // Create a Function and take two int as arguments and find there sum
 
+import 'dart:io';
 
+void main() {
+  myFunction(firstInteger: firstInteger, secondIneger: secondInteger);
+}
+
+void myFunction(
+    {required Function() firstInteger, required Function() secondIneger}) {
+  firstInteger();
+  secondIneger();
+}
+
+// First Input Function
+void firstInteger() {
+  stdout.write("Enter the First Integer : ");
+  int firstInput = int.parse(stdin.readLineSync()!);
+  print(firstInput);
+}
+
+// Second Input Function
+void secondInteger() {
+  stdout.write("Enter the Second Integer : ");
+  int secondInput = int.parse(stdin.readLineSync()!);
+  print(secondInput);
+}
