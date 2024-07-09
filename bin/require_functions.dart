@@ -265,12 +265,12 @@ void myFunction(
 void firstInteger() {
   stdout.write("Enter the First Integer : ");
   int firstInput = int.parse(stdin.readLineSync()!);
-  print(firstInput);
+  print("The First Integer : $firstInput");
 }
 
 // Second Input Function
 void secondInteger() {
   stdout.write("Enter the Second Integer : ");
   int secondInput = int.parse(stdin.readLineSync()!);
-  print(secondInput);
+  print("The Second Integer : $secondInput");
 }
