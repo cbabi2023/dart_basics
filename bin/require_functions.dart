@@ -316,17 +316,17 @@
 //   print("The Second Integer : $secondInput");
 // }
 
-void main() {
-  myFun(customFunction);
-}
+// void main() {
+//   myFun(customFunction);
+// }
 
-void myFun(void Function(int a, int b) customFunction) {
-  customFunction(3, 5);
-}
+// void myFun(void Function(int a, int b) customFunction) {
+//   customFunction(3, 5);
+// }
 
-void customFunction( int a, int b ) {
-  print("Printing the Arguments: $a and $b ");
-}
+// void customFunction( int a, int b ) {
+//   print("Printing the Arguments: $a and $b ");
+// }
 
 // void main() {
 //   myFun(customFunction);
@@ -341,3 +341,86 @@ void customFunction( int a, int b ) {
 //   print("Printing the Arguments: $a and $b");
 // }
 
+// myFun({required void Function(int a, int b) customFunction}) {
+//   customFunction(1, 3);
+// }
+
+// void main() {
+//   myFun(customFunction: (a, b) {
+//     print("a : $a and b: $b");
+//   });
+// }
+
+// Arguments valuation in Void main Function
+
+// myFun(
+//     {required int number1,
+//     required int number2,
+//     required Function(int a, int b) customFunction}) {
+//   customFunction(number1, number2);
+// }
+
+// void main() {
+//   myFun(number1: 78, number2: 67, customFunction: printArgs);
+// }
+
+// printArgs(int a, int b) {
+//   print(a);
+//   print(b);
+// }
+
+// Write a Dart Function calculate that takes two integers and a function as arguments.
+// The function should perform a basic arimetic operaton(addition, substraction, multiplication, or division)
+// On the two integers and return the result.
+
+// import 'dart:io';
+
+// calculate(
+//     {required int a,
+//     required int b,
+//     required void Function(int a, int b) arithemeticFunction}) {
+//   arithemeticFunction(a, b);
+// }
+
+// void argumentFunction(int a, int b) {
+//   add(a, b);
+//   substraction(a, b);
+//   multiplication(a, b);
+//   division(a, b);
+// }
+
+// void main() {
+//   calculate(a: firstNumber, b: secondNumber, arithemeticFunction: argumentFunction);
+// }
+
+// // Operational Functions
+
+// add(a, b) {
+//   print("Addition : ${a + b}");
+// }
+
+// substraction(a, b) {
+//   print("The Substraction : ${a - b}");
+//   return a - b;
+// }
+
+// multiplication(a, b) {
+//   print("The multiplication : ${a * b}");
+//   return a * b;
+// }
+
+// division(a, b) {
+//   print("The Division :  ${a / b}");
+//   return a / b;
+// }
+
+// // value taking function
+
+// int firstNumber = int.parse(stdin.readLineSync()!);
+// int secondNumber = int.parse(stdin.readLineSync()!);
+
+// Single way of returning Function
+
+void main() => sum(1, 2);
+
+void sum(int a, int b) => print(a + b);
