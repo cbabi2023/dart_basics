@@ -321,7 +321,6 @@ void main() {
 }
 
 void myFun(void Function(int a, int b) customFunction) {
-  print("Fun..");
   customFunction(3, 5);
 }
 
