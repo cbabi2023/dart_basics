@@ -421,6 +421,26 @@
 
 // Single way of returning Function
 
-void main() => sum(1, 2);
+// void main() => sum(1, 2);
 
-void sum(int a, int b) => print(a + b);
+// void sum(int a, int b) => print(a + b);
+
+calculate(
+    {required int num1,
+    required int num2,
+    required num Function(int a, int b) operation}) {
+  num result = operation(num1, num2);
+  print(result);
+}
+
+num addition(int number1, int number2) => number1 + number2;
+num subtraction(int number1, int number2) => number1 - number2;
+num multiplication(int number1, int number2) => number1 * number2;
+num division(int number1, int number2) => number1 / number2;
+
+void main() {
+  calculate(num1: 78, num2: 56, operation: addition);
+  calculate(num1: 78, num2: 56, operation: subtraction);
+  calculate(num1: 78, num2: 56, operation: multiplication);
+  calculate(num1: 78, num2: 56, operation: division);
+}
